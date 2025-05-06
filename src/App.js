@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 // ... existing code ...
-import { 
-  Home, 
-  Briefcase, 
-  Layers, 
-  Cpu, 
-  Mail, 
-  Phone, 
+import {
+  Home,
+  Briefcase,
+  Layers,
+  Cpu,
+  Mail,
+  Phone,
   MapPin,
   ArrowRight,
   Check,
@@ -69,8 +69,13 @@ const GuangdongSiliconLinkTech = () => {
       {/* 导航栏 */}
       <nav className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <CircuitBoard className="text-blue-600 mr-2" size={28} />
+          <div className="flex items-center ml-[-150px]">
+            {/* 替换为插入图片的代码 */}
+            <img
+              src="/logo2.png"
+              alt="公司logo"
+              className="text-blue-600 mr-20 h-10 w-30"
+            />
             <span className="text-xl font-bold text-blue-800">广东矽联科电子科技有限公司</span>
           </div>
 
@@ -86,9 +91,8 @@ const GuangdongSiliconLinkTech = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`flex items-center px-2 py-1 rounded-md transition-colors ${
-                  activeSection === item.id ? 'text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-blue-500'
-                }`}
+                className={`flex items-center px-2 py-1 rounded-md transition-colors ${activeSection === item.id ? 'text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-blue-500'
+                  }`}
               >
                 {item.icon}
                 {item.label}
@@ -133,9 +137,8 @@ const GuangdongSiliconLinkTech = () => {
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
                   whileHover={{ x: 5 }}
-                  className={`flex items-center px-3 py-2 rounded-md transition-colors ${
-                    activeSection === item.id ? 'text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-blue-500'
-                  }`}
+                  className={`flex items-center px-3 py-2 rounded-md transition-colors ${activeSection === item.id ? 'text-blue-600 bg-blue-50' : 'text-gray-600 hover:text-blue-500'
+                    }`}
                 >
                   {item.icon}
                   {item.label}
@@ -150,21 +153,29 @@ const GuangdongSiliconLinkTech = () => {
       <section id="home" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0">
-            <motion.h1 
+            <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
             >
-              专业的<span className="text-blue-600">PCB设计</span>与<span className="text-blue-600">原理图</span>服务
+              专业的<span className="text-blue-600">PCB设计</span>与<span className="text-blue-600">组件库</span>维护管理
             </motion.h1>
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-lg text-gray-600 mb-8"
             >
-              广东矽联科电子信息科技有限公司专注于提供高质量的PCB设计、原理图设计和电子工程解决方案，助力您的产品快速上市。
+              小到助听器，大到服务器的各种尺寸，各种层数，无论是HDI还是硬软板，我们都是专业的Candence Allegro PCB 设计。
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-lg text-gray-600 mb-8"
+            >
+              专业解读元器件厂商规格书，参照IPC-7351规范和多年设计经验创建各种类型元器件logic symol和Footprint.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -172,13 +183,13 @@ const GuangdongSiliconLinkTech = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex space-x-4"
             >
-              <button 
+              <button
                 onClick={() => scrollToSection('services')}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md flex items-center transition-colors"
               >
                 了解服务 <ArrowRight className="ml-2" size={18} />
               </button>
-              <button 
+              <button
                 onClick={() => scrollToSection('contact')}
                 className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-md flex items-center transition-colors"
               >
@@ -191,7 +202,7 @@ const GuangdongSiliconLinkTech = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              src="https://s.coze.cn/t/U4wc5igtrjI/"
+              src="/PCB2.png"
               alt="PCB设计服务"
               className="rounded-lg shadow-xl w-full"
             />
@@ -202,7 +213,7 @@ const GuangdongSiliconLinkTech = () => {
       {/* 服务 */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -292,7 +303,7 @@ const GuangdongSiliconLinkTech = () => {
       {/* 项目案例 */}
       <section id="projects" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -350,8 +361,8 @@ const GuangdongSiliconLinkTech = () => {
                 whileHover={{ y: -5 }}
                 className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all"
               >
-                <img 
-                  src={project.image} 
+                <img
+                  src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover"
                 />
@@ -387,7 +398,7 @@ const GuangdongSiliconLinkTech = () => {
       {/* 关于我们 */}
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -399,13 +410,13 @@ const GuangdongSiliconLinkTech = () => {
               关于我们
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              广东矽联科电子信息科技有限公司是一家专注于电子设计服务的专业技术公司。
+              广东矽联科电子科技有限公司是一家专注于电子设计服务的专业技术公司。
             </p>
           </motion.div>
 
           <div className="flex flex-col md:flex-row items-center mb-16">
             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-              <motion.h3 
+              <motion.h3
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -414,32 +425,51 @@ const GuangdongSiliconLinkTech = () => {
               >
                 公司简介
               </motion.h3>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
                 className="text-gray-600 mb-4"
               >
-                广东矽联科电子信息科技有限公司成立于2015年，总部位于广东省中山市，是一家专注于PCB设计、原理图设计和电子工程解决方案的高新技术企业。
+                广东矽联科电子科技有限公司成立于2019年12月，专注于PCB设计、设计资管管理及设计软件二次开发等专业服务。
               </motion.p>
-              <motion.p 
+              <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
                 className="text-gray-600 mb-4"
               >
-                我们拥有一支经验丰富的工程师团队，平均从业经验超过8年，曾为消费电子、工业控制、医疗设备、汽车电子等多个行业提供专业设计服务。
+                超过15人的工程师团队响应，人均经验6年以上，拥有丰富的电子设计经验，同时拥有国内领先的设计软件和设计平台。
               </motion.p>
-              <motion.p 
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="text-gray-600 mb-4"
+              >
+                多种PCB产品设计经验，IPC CID+资深专家把关，确保产品设计的质量和性能。
+              </motion.p>
+              <motion.p
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                viewport={{ once: true }}
+                className="text-gray-600 mb-4"
+              >
+                工程师接触最多的就是各种数据，我们针对大数据提炼和处理进行了Excel VBA二次开发，极大提升工作效率。
+              </motion.p>
+
+              <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
                 viewport={{ once: true }}
                 className="text-gray-600"
               >
-                公司秉承"专业、创新、诚信、共赢"的理念，致力于为客户提供高质量、高效率的电子设计服务，助力客户产品快速上市并取得成功。
+                Skill作为Cadence专有语言，学习的人凤毛麟角，我们拥有百万行代码量的工程师，可快速开发各种针对Candence产品的程序，提升工程师效率。
               </motion.p>
             </div>
             <div className="md:w-1/2">
@@ -448,7 +478,7 @@ const GuangdongSiliconLinkTech = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                src="https://s.coze.cn/t/hA4EW2u0W8k/"
+                src="/PCB3.png"
                 alt="公司环境"
                 className="rounded-lg shadow-xl w-full"
               />
@@ -459,7 +489,7 @@ const GuangdongSiliconLinkTech = () => {
             {[
               {
                 title: "专业团队",
-                description: "拥有20+资深电子工程师，平均8年以上行业经验",
+                description: "拥有15+资深电子工程师，平均6年以上行业经验",
                 icon: <Users size={32} className="text-blue-600" />
               },
               {
@@ -495,7 +525,7 @@ const GuangdongSiliconLinkTech = () => {
       {/* 联系我们 */}
       <section id="contact" className="py-20 bg-blue-50">
         <div className="container mx-auto px-4">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -513,7 +543,7 @@ const GuangdongSiliconLinkTech = () => {
 
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/2 mb-8 md:mb-0 md:pr-8">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -526,14 +556,14 @@ const GuangdongSiliconLinkTech = () => {
                     <Phone className="text-blue-600 mr-3 mt-1" size={20} />
                     <div>
                       <p className="text-gray-600">电话咨询</p>
-                      <p className="text-gray-800 font-medium">0755-12345678</p>
+                      <p className="text-gray-800 font-medium">+86(0)19966328851</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Mail className="text-blue-600 mr-3 mt-1" size={20} />
                     <div>
                       <p className="text-gray-600">电子邮件</p>
-                      <p className="text-gray-800 font-medium">info@siliconlink-tech.com</p>
+                      <p className="text-gray-800 font-medium">Stephen_Mai@silimco.com</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -558,7 +588,7 @@ const GuangdongSiliconLinkTech = () => {
             </div>
 
             <div className="md:w-1/2">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -622,15 +652,15 @@ const GuangdongSiliconLinkTech = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center mb-4 md:mb-0">
               <CircuitBoard className="text-blue-600 mr-2" size={24} />
-              <span className="text-lg font-semibold text-gray-800">广东矽联科电子信息科技有限公司</span>
+              <span className="text-lg font-semibold text-gray-800">广东矽联科电子科技有限公司</span>
             </div>
             <div className="text-gray-600 text-sm">
               <p>© 2023 广东矽联科电子 版权所有</p>
             </div>
           </div>
           <div className="mt-6 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-           
-           
+
+
           </div>
         </div>
       </footer>
