@@ -570,7 +570,7 @@ const GuangdongSiliconLinkTech = () => {
                     <MapPin className="text-blue-600 mr-3 mt-1" size={20} />
                     <div>
                       <p className="text-gray-600">公司地址</p>
-                      <p className="text-gray-800 font-medium">广东省中山市火炬开发区</p>
+                      <p className="text-gray-800 font-medium">广东省中山市火炬开发区德众广场</p>
                     </div>
                   </div>
                 </div>
@@ -650,10 +650,16 @@ const GuangdongSiliconLinkTech = () => {
       <footer className="bg-gray-100 border-t border-gray-200 py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
+      
             <div className="flex items-center mb-4 md:mb-0">
-              <CircuitBoard className="text-blue-600 mr-2" size={24} />
+              <img
+                src="/logo1.png"
+                alt="公司logo"
+                className="text-blue-600 mr-2 h-10"
+              />
               <span className="text-lg font-semibold text-gray-800">广东矽联科电子科技有限公司</span>
             </div>
+
             <div className="text-gray-600 text-sm">
               <p>© 2023 广东矽联科电子 版权所有</p>
             </div>
