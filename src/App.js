@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react';
-// ... existing code ...
+import { Routes, Route, } from 'react-router-dom';
+import WelcomePage from './components/WelcomePage';
+import { Link } from 'react-router-dom';
+
 import {
   Home,
   Briefcase,
@@ -66,6 +69,9 @@ const GuangdongSiliconLinkTech = () => {
 
   return (
     <div className="font-sans bg-gray-50 text-gray-800 min-h-screen">
+      <Routes>
+        <Route path="/welcome" element={<WelcomePage />} />
+      </Routes>
       {/* 导航栏 */}
       <nav className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
@@ -323,32 +329,39 @@ const GuangdongSiliconLinkTech = () => {
               {
                 title: "智能家居控制器",
                 description: "8层HDI板设计，集成Wi-Fi/BLE模块，实现低功耗高性能控制。",
-                image: "https://s.coze.cn/t/HPNF5TAEcEk/"
+                image: "https://s.coze.cn/t/HPNF5TAEcEk/",
+                link: "/welcome"
+                // link: "/WeclomePage"
               },
               {
                 title: "工业PLC模块",
                 description: "16层板设计，支持多种工业通信协议，EMC性能优异。",
-                image: "https://s.coze.cn/t/BjYEu-0X3Mw/"
+                image: "https://s.coze.cn/t/BjYEu-0X3Mw/",
+                link: "https://www.baidu.com/s?wd=工业PLC模块"
               },
               {
                 title: "医疗监护设备",
                 description: "高精度模拟前端设计，通过医疗设备EMC认证。",
-                image: "https://s.coze.cn/t/YlzzbBpmlU4/"
+                image: "https://s.coze.cn/t/YlzzbBpmlU4/",
+                link: "https://www.baidu.com/s?wd=医疗监护设备"
               },
               {
                 title: "汽车电子控制单元",
                 description: "符合AEC-Q100标准，支持CAN总线通信，耐高温设计。",
-                image: "https://s.coze.cn/t/Nxfd5FZUhQg/"
+                image: "https://s.coze.cn/t/Nxfd5FZUhQg/",
+                link: "https://www.baidu.com/s?wd=汽车电子控制单元"
               },
               {
                 title: "消费电子主板",
                 description: "高集成度设计，优化成本同时保证性能。",
-                image: "https://s.coze.cn/t/aBZJ5o60jLs/"
+                image: "https://s.coze.cn/t/aBZJ5o60jLs/",
+                link: "https://www.baidu.com/s?wd=消费电子主板"
               },
               {
                 title: "物联网网关",
                 description: "多协议支持，低功耗设计，长期稳定运行。",
-                image: "https://s.coze.cn/t/76YtWlQPgRs/"
+                image: "https://s.coze.cn/t/76YtWlQPgRs/",
+                link: "https://www.baidu.com/s?wd=物联网网关"
               }
             ].map((project, index) => (
               <motion.div
@@ -368,7 +381,10 @@ const GuangdongSiliconLinkTech = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
-                  <button className="text-blue-600 hover:text-blue-800 flex items-center transition-colors">
+                  <button 
+                    className="text-blue-600 hover:text-blue-800 flex items-center transition-colors"
+                    onClick={() => window.open(project.link, '_blank')}
+                  >
                     查看详情 <ArrowRight className="ml-1" size={16} />
                   </button>
                 </div>
@@ -570,6 +586,8 @@ const GuangdongSiliconLinkTech = () => {
                     <div>
                       <p className="text-gray-600">公司地址</p>
                       <p className="text-gray-800 font-medium">广东省中山市火炬开发区德众广场</p>
+                      
+
                     </div>
                   </div>
                 </div>
@@ -674,5 +692,7 @@ const GuangdongSiliconLinkTech = () => {
 };
 
 export default GuangdongSiliconLinkTech;
+
+
 
 
