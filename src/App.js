@@ -150,63 +150,62 @@ const GuangdongSiliconLinkTech = () => {
       </nav>
 
       {/* 首页 */}
-      <section id="home" className="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
-        <div className="container mx-auto px-4 flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl font-bold text-gray-800 mb-6"
+      <section id="home" className="relative py-20 h-screen flex items-center justify-center">
+        {/* 背景图片 */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/PCB4.png" // 替换为您想要的背景图片路径
+            alt="PCB设计背景"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div> {/* 半透明遮罩 */}
+        </div>
+
+        {/* 内容 */}
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl md:text-5xl font-bold text-white mb-6"
+          >
+            专业的<span className="text-blue-300">PCB设计</span>与<span className="text-blue-300">组件库</span>维护管理
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto"
+          >
+            小到助听器，大到服务器的各种尺寸，各种层数，无论是HDI还是硬软板，我们都是专业的Candence Allegro PCB 设计。
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto"
+          >
+            专业解读元器件厂商规格书，参照IPC-7351规范和多年设计经验创建各种类型元器件logic symol和Footprint.
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex space-x-4 justify-center"
+          >
+            <button
+              onClick={() => scrollToSection('services')}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md flex items-center transition-colors"
             >
-              专业的<span className="text-blue-600">PCB设计</span>与<span className="text-blue-600">组件库</span>维护管理
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg text-gray-600 mb-8"
+              了解服务 <ArrowRight className="ml-2" size={18} />
+            </button>
+            <button
+              onClick={() => scrollToSection('contact')}
+              className="border border-white text-white hover:bg-white hover:bg-opacity-10 px-6 py-3 rounded-md flex items-center transition-colors"
             >
-              小到助听器，大到服务器的各种尺寸，各种层数，无论是HDI还是硬软板，我们都是专业的Candence Allegro PCB 设计。
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg text-gray-600 mb-8"
-            >
-              专业解读元器件厂商规格书，参照IPC-7351规范和多年设计经验创建各种类型元器件logic symol和Footprint.
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex space-x-4"
-            >
-              <button
-                onClick={() => scrollToSection('services')}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md flex items-center transition-colors"
-              >
-                了解服务 <ArrowRight className="ml-2" size={18} />
-              </button>
-              <button
-                onClick={() => scrollToSection('contact')}
-                className="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-md flex items-center transition-colors"
-              >
-                联系我们 <Phone className="ml-2" size={18} />
-              </button>
-            </motion.div>
-          </div>
-          <div className="md:w-1/2">
-            <motion.img
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              src="/PCB2.png"
-              alt="PCB设计服务"
-              className="rounded-lg shadow-xl w-full"
-            />
-          </div>
+              联系我们 <Phone className="ml-2" size={18} />
+            </button>
+          </motion.div>
         </div>
       </section>
 
@@ -581,7 +580,7 @@ const GuangdongSiliconLinkTech = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                src="https://s.coze.cn/t/rcn902bMyig/"
+                src="/dezhong2.jpg"
                 alt="公司地址"
                 className="rounded-lg shadow-xl w-full"
               />
@@ -653,7 +652,7 @@ const GuangdongSiliconLinkTech = () => {
       
             <div className="flex items-center mb-4 md:mb-0">
               <img
-                src="/logo1.png"
+                src="/logo2.png"
                 alt="公司logo"
                 className="text-blue-600 mr-2 h-10"
               />
