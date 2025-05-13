@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 const WelcomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 px-4 sm:px-6 lg:px-8">
       <motion.div
@@ -61,14 +62,24 @@ const WelcomePage = () => {
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="mt-8"
+                className="mt-8 flex gap-4" // 添加flex布局让按钮并排
               >
-                <Link
-                  to="/"
+               
+                <button
+                  onClick={() => {
+                    navigate('/');
+                    // 延迟300ms确保页面加载完成后滚动
+                    setTimeout(() => {
+                      const projectsSection = document.getElementById('projects');
+                      if (projectsSection) {
+                        projectsSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }, 300);
+                  }}
                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 transition-colors"
                 >
-                  了解更多
-                </Link>
+                  返回首页
+                </button>
               </motion.div>
             </motion.div>
           </div>

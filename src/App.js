@@ -371,7 +371,7 @@ const MainContent = () => {
               {
                 title: "物联网网关",
                 description: "多协议支持，低功耗设计，长期稳定运行。",
-                image: "https://s.coze.cn/t/aBZJ5o60jLs/",
+                image: "/PCB5.png",
                 link: "/Internet"
               }
             ].map((project, index) => (
