@@ -458,7 +458,7 @@ const MainContent = () => {
                 viewport={{ once: true }}
                 className="text-gray-600 mb-4"
               >
-                广东矽联科电子科技有限公司成立于2019年12月，专注于PCB设计、设计资管管理及设计软件二次开发等专业服务。
+                广东矽联科电子科技有限公司成立于2019年12月，专注于PCB设计、设计资源管理及设计软件二次开发等专业服务。
               </motion.p>
               <motion.p
                 initial={{ opacity: 0, x: -20 }}
