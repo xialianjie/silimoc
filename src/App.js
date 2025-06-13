@@ -596,7 +596,7 @@ const MainContent = () => {
                     <MapPin className="text-blue-600 mr-3 mt-1" size={20} />
                     <div>
                       <p className="text-gray-600">公司地址</p>
-                      <p className="text-gray-800 font-medium">广东省中山市火炬开发区德众广场</p>
+                      <p className="text-gray-800 font-medium">广东省中山市火炬开发区德仲广场</p>
 
 
                     </div>
