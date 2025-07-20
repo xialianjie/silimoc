@@ -194,7 +194,7 @@ const MainContent = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-lg text-gray-200 mb-8 max-w-3xl mx-auto"
           >
-            小到助听器，大到服务器的各种尺寸，各种层数，无论是HDI还是硬软板，我们都是专业的Candence Allegro PCB 设计。
+            小到助听器，大到服务器的各种尺寸，各种层数，无论是HDI还是硬软板，我们都是专业的PCB 设计。
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -458,17 +458,9 @@ const MainContent = () => {
                 viewport={{ once: true }}
                 className="text-gray-600 mb-4"
               >
-                广东矽联科电子科技有限公司成立于2019年12月，专注于PCB设计、设计资源管理及设计软件二次开发等专业服务。
+                广东矽联科电子科技有限公司成立于2019年12月，专注于PCB设计、设计资源管理及设计软件二次开发等专业服务。团队拥有丰富的电子设计经验，同时拥有国内领先的设计软件和设计平台。
               </motion.p>
-              <motion.p
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                viewport={{ once: true }}
-                className="text-gray-600 mb-4"
-              >
-                超过15人的工程师团队响应，人均经验6年以上，拥有丰富的电子设计经验，同时拥有国内领先的设计软件和设计平台。
-              </motion.p>
+             
               <motion.p
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
