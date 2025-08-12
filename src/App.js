@@ -678,6 +678,7 @@ const MainContent = () => {
                 className="text-blue-600 mr-2 h-10"
               />
               <span className="text-lg font-semibold text-gray-800">广东矽联科电子科技有限公司</span>
+              <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2025449840号-1</a>
             </div>
 
             <div className="text-gray-600 text-sm">
